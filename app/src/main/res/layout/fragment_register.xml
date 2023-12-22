@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="700dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".authenticate.RegisterFragment">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="75dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_username_email_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Isi email kamu"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="@style/TextAppearance.MyApp.LabelLarge" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/container_edit_text_email_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_email_register"
+                    android:layout_width="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:layout_height="42dp"
+                    android:hint="tambahkan email kamu"
+                    style="@style/DesignSystem.TextInputEditText"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/text_username_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username kamu"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="@style/TextAppearance.MyApp.LabelLarge" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/container_edit_text_username_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_username_register"
+                    android:layout_width="match_parent"
+                    android:inputType="textPersonName"
+                    android:layout_height="42dp"
+                    android:hint="Buat username baru"
+                    style="@style/DesignSystem.TextInputEditText"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/text_nim_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Induk Keluarga"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="@style/TextAppearance.MyApp.LabelLarge" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/container_edit_text_nim_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_nim_register"
+                    android:layout_width="match_parent"
+                    android:inputType="text"
+                    android:layout_height="42dp"
+                    android:hint="Input NIK"
+                    style="@style/DesignSystem.TextInputEditText"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/text_password_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sandi baru kamu"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="@style/TextAppearance.MyApp.LabelLarge" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/container_edit_text_password_register"
+                app:endIconMode="password_toggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:hintEnabled="false">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_password_register"
+                    android:layout_width="match_parent"
+                    android:inputType="textPassword"
+                    android:hint="masukin disini"
+                    android:layout_height="42dp"
+                    android:autofillHints="password"
+                    style="@style/DesignSystem.TextInputEditText"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Create account"
+                android:textColor="@color/white"
+                android:textStyle="normal"/>
+
+
+        </LinearLayout>
+
+
+
+</FrameLayout>

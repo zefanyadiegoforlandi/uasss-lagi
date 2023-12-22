@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- TextView untuk Judul -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Destinasi Wisata Pilihanmu"
+        android:textSize="24sp"
+        android:layout_gravity="left"
+        android:layout_marginBottom="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+    <!-- LinearLayout untuk dua CardView -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- CardView Pertama -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clipToOutline="true"
+            app:cardBackgroundColor="@color/bluesky"
+            android:id="@+id/card_view_promotion"
+            app:cardCornerRadius="16dp"
+            android:layout_marginEnd="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/image_view_promotion"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:minHeight="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pacitan"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_promotion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="18dp"
+                    android:text="Pantai Pacitan"
+                    android:textAppearance="@style/TextAppearance.MyApp.LabelSmall"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/image_view_promotion" />
+
+                <TextView
+                    android:id="@+id/text_promotion_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="12dp"
+                    android:text="Jawa Timur"
+                    android:textAppearance="@style/TextAppearance.MyApp.LabelSmall"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_promotion" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- CardView Kedua -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clipToOutline="true"
+            app:cardBackgroundColor="@color/bluesky"
+            android:id="@+id/card_view_promotion_2"
+            app:cardCornerRadius="16dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/image_view_promotion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:minHeight="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/karimunjawa"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_promotion2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="18dp"
+                    android:text="Karimunjawa"
+                    android:textAppearance="@style/TextAppearance.MyApp.LabelSmall"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/image_view_promotion2" />
+
+                <TextView
+                    android:id="@+id/text_promotion_description2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textSize="12dp"
+                    android:text="Jawa Tengah"
+                    android:textAppearance="@style/TextAppearance.MyApp.LabelSmall"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_promotion2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+</LinearLayout>

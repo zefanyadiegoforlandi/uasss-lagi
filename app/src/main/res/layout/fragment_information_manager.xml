@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?android:attr/colorBackground"
+    android:id="@+id/swipe_refresh_layout_information_manager"
+    tools:context=".admin.InformationManagerFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="150dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCardView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="?attr/colorPrimarySurface"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:id="@+id/text_view_manager_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome To Cloud Database Management System!"
+                            android:textAppearance="@style/TextAppearance.MyApp.TitleLarge"
+                            android:textColor="@color/md_theme_dark_inverseOnSurface"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_view_manager_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Fitur ini digunakan untuk mengelola data informasi yang akan didapat akun pengguna dan admin. Harap taati peraturan yang berlaku."
+                            android:textAppearance="@style/TextAppearance.MyApp.BodyLarge"
+                            android:textColor="@color/md_theme_dark_inverseOnSurface"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/text_view_manager_label" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/city_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:hint="City"
+                    android:visibility="gone"
+                    app:boxStrokeColor="?attr/colorOnSurface"
+                    app:hintTextColor="?attr/colorOnSurface"
+                    app:layout_constraintEnd_toEndOf="@+id/button_reset"
+                    app:layout_constraintStart_toStartOf="@+id/button_pilih_tipe_database"
+                    app:layout_constraintTop_toBottomOf="@+id/button_pilih_tipe_database">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/city_input_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorOnSurface" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:hint="Name"
+                    app:boxStrokeColor="?attr/colorOnSurface"
+                    app:hintTextColor="?attr/colorOnSurface"
+                    app:layout_constraintEnd_toEndOf="@+id/button_reset"
+                    app:layout_constraintStart_toStartOf="@+id/button_pilih_tipe_database"
+                    app:layout_constraintTop_toBottomOf="@+id/city_input_layout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name_input_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="?attr/colorOnSurface" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/weight_input_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:hint="Weight"
+                    app:boxStrokeColor="?attr/colorOnSurface"
+                    app:hintTextColor="?attr/colorOnSurface"
+                    app:layout_constraintEnd_toEndOf="@+id/button_reset"
+                    app:layout_constraintStart_toStartOf="@+id/button_pilih_tipe_database"
+                    app:layout_constraintTop_toBottomOf="@+id/name_input_layout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/weight_input_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="?attr/colorOnSurface" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:tooltipText="Reset Form"
+                    android:id="@+id/button_reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:backgroundTint="?attr/colorSecondaryContainer"
+                    android:padding="16dp"
+                    android:src="@drawable/baseline_backspace_24"
+                    android:tint="@color/md_theme_dark_inverseOnSurface"
+                    app:layout_constraintBottom_toBottomOf="@+id/button_pilih_tipe_database"
+                    app:layout_constraintEnd_toEndOf="@+id/materialCardView5"
+                    app:layout_constraintTop_toTopOf="@+id/button_pilih_tipe_database" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_pilih_tipe_database"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:backgroundTint="?attr/colorPrimaryContainer"
+                    android:drawableStart="@drawable/storage_fill1_wght400_grad0_opsz24"
+                    android:drawableTint="@color/md_theme_dark_inverseOnSurface"
+                    android:paddingHorizontal="16dp"
+                    android:text="Pilih Tipe Data Base"
+                    android:textAppearance="@style/TextAppearance.MyApp.TitleMedium"
+                    android:textColor="@color/md_theme_dark_inverseOnSurface"
+                    app:layout_constraintEnd_toStartOf="@+id/button_reset"
+                    app:layout_constraintStart_toStartOf="@+id/materialCardView5"
+                    app:layout_constraintTop_toBottomOf="@+id/materialCardView5" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_simpan_data"
+                    android:layout_width="0dp"
+                    android:tooltipText="Upload Data"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/rounded_rectangle_clickable"
+                    android:backgroundTint="?attr/colorPrimaryContainer"
+                    app:tint="@color/md_theme_dark_inverseOnSurface"
+                    android:src="@drawable/baseline_cloud_upload_24"
+                    android:padding="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/weight_input_layout"
+                    app:layout_constraintStart_toStartOf="@+id/guideline2"
+                    app:layout_constraintTop_toBottomOf="@+id/weight_input_layout" />
+
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_hapus_data"
+                    android:layout_width="0dp"
+                    android:tooltipText="Delete Data"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_rectangle_clickable"
+                    android:backgroundTint="?attr/colorErrorContainer"
+                    android:padding="16dp"
+                    android:src="@drawable/delete_fill1_wght400_grad0_opsz24"
+                    app:layout_constraintEnd_toEndOf="@+id/weight_input_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/button_simpan_data"
+                    app:tint="?attr/colorOnErrorContainer" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_ambil_data"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="32dp"
+                    android:tooltipText="Get Data"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/rounded_rectangle_clickable"
+                    android:backgroundTint="?attr/colorSecondaryContainer"
+                    android:padding="8dp"
+                    app:tint="@color/md_theme_dark_inverseOnSurface"
+                    android:src="@drawable/baseline_cloud_download_24"
+                    app:layout_constraintBottom_toBottomOf="@+id/button_simpan_data"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/weight_input_layout"
+                    app:layout_constraintTop_toBottomOf="@+id/weight_input_layout" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <TextView
+                    android:id="@+id/error_log_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In Queue:"
+                    android:textAppearance="@style/TextAppearance.MyApp.LabelLarge"
+                    android:textColor="?attr/colorOnSurface"
+                    app:layout_constraintBottom_toBottomOf="@+id/button_hapus_data"
+                    app:layout_constraintStart_toStartOf="@+id/button_ambil_data"
+                    app:layout_constraintTop_toTopOf="@+id/button_hapus_data" />
+
+                <TextView
+                    android:id="@+id/count_log_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.MyApp.LabelLarge"
+                    android:textColor="?attr/colorError"
+                    app:layout_constraintBottom_toBottomOf="@+id/error_log_text_view"
+                    app:layout_constraintStart_toEndOf="@+id/error_log_text_view"
+                    app:layout_constraintTop_toTopOf="@+id/error_log_text_view" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/floating_action_button_accounts"
+            style="@style/Widget.Material3.ExtendedFloatingActionButton.Icon.Primary"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text=" Tambahkan Akun"
+            android:textColor="@color/md_theme_dark_inverseOnSurface"
+            app:backgroundTint="?attr/colorPrimaryContainer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

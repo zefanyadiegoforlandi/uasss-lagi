@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_navigation_bottom"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.ppb.travellin.dashboard.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.ppb.travellin.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_managerFragment"
+            app:destination="@id/managerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripHistoryFragment"
+        android:name="com.ppb.travellin.history.TripHistoryFragment"
+        android:label="fragment_trip_history"
+        tools:layout="@layout/fragment_trip_history" />
+    <fragment
+        android:id="@+id/managerFragment"
+        android:name="com.ppb.travellin.admin.ManagerFragment"
+        android:label="fragment_manager"
+        tools:layout="@layout/fragment_manager" >
+        <action
+            android:id="@+id/action_managerFragment_to_informationManagerFragment"
+            app:destination="@id/informationManagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationManagerFragment"
+        android:name="com.ppb.travellin.admin.InformationManagerFragment"
+        android:label="fragment_information_manager"
+        tools:layout="@layout/fragment_information_manager" />
+</navigation>
